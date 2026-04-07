@@ -11,7 +11,7 @@ const Footer = () => {
                     © {new Date().getFullYear()} FITZONE PERFORMANCE LAB. PUSH YOUR LIMITS.
                 </span>
             </div>
-            <div className="m-5 space-x-4">
+            <div className="m-5 space-x-5">
                 <Link to="/privacy" className="text-white/50 hover:text-white text-sm">
                     PRIVACY
                 </Link>
