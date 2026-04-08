@@ -23,6 +23,8 @@ const Pricing = () => {
         <button className='w-[216px] h-[44px] py-3 bg-[#E8000D] position relative bottom-2.5 left-2'>YEARLY (SAVE 20%)</button>
       </div>
     </section>
+
+    //
   )
 }
 
