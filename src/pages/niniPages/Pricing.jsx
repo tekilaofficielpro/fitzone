@@ -2,7 +2,8 @@ import React from 'react'
 
 const Pricing = () => {
   return (
-     // Section Hero et Banière
+     <>
+    {/* Section Hero et Banière */}
     <section className='relative w-[1700px] h-[450px] mx-1  py-24 px-120 flex flex-col gap-16 '>
       <div 
         className="absolute inset-0 bg-[url('/pricingCoach4.png')] bg-cover bg-center"
@@ -18,13 +19,42 @@ const Pricing = () => {
         </div>
         <h2 className='w-[360px] h-[28px] text-[#A0A0A0] text-[25px] mx-50'>No hidden fees. Cancel anytime.</h2>
       </div>
-      <div className='w-[363px] h-[56px] bg-[#1C1B1B] mx-49 p-4 text-white flex flex-row gap-0 font-bold'>
-        <button className='w-[138px] h-[44px] py-3 position relative bottom-2'>MONTHLY</button>
+      <div className='w-[363px] h-[56px] bg-[#2e2d2d] mx-49 p-4 text-white flex flex-row gap-0 font-bold'>
+        <button className='w-[138px] h-[44px] py-3 position relative bottom-2.5'>MONTHLY</button>
         <button className='w-[216px] h-[44px] py-3 bg-[#E8000D] position relative bottom-2.5 left-2'>YEARLY (SAVE 20%)</button>
       </div>
     </section>
 
-    //
+    {/* Pricing card section */}
+    <section className='text-white'>
+      <div className=''>
+        <ul className='flex flex-row gap-10'>
+          <li>
+            <div>
+              <h1>STARTER</h1> 
+              <div>
+                <h1>$</h1>
+                <h1>49</h1>
+                <h2>/MO</h2>
+              </div>   
+
+            </div>
+          </li>
+          <li>
+            <fieldset>
+              <legend>MOST POPULAR</legend>
+              <h1>PRO</h1>
+            </fieldset>
+          </li>
+          <li>
+            <div>
+              <h1>ELITE</h1>
+            </div>            
+          </li>
+        </ul>
+      </div>
+    </section>
+    </>
   )
 }
 
