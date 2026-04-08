@@ -2,7 +2,8 @@ import React from 'react'
 
 const Pricing = () => {
   return (
-    <>
+
+     <>
     {/* Section Hero et Banière */}
     <section className='relative w-[1700px] h-[450px] mx-1  py-24 px-120 flex flex-col gap-16 '>
       <div 
@@ -55,7 +56,6 @@ const Pricing = () => {
       </div>
     </section>
     </>
-
   )
 }
 
