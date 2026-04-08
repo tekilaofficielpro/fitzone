@@ -28,7 +28,8 @@ const Pricing = () => {
     </section>
 
     {/* Pricing card section */}
-    <section className='w-[1280px] h-[680px] text-white '>
+    <section className='w-[1280px] h-[750px] text-white '>
+
       <div className='py-[80px] px-[32px] position relative left-[200px] bg-[#131313]'>
         <ul className='w-[1216px] h-[520px] max-w-[1280px] grid grid-rows-1 grid-cols-3 gap-y-8 gap-x-20 opacity-100'>
           <li className='w-[384px] h-[525px] flex justify-between p-10 border-1 border-olive-600 opacity-100 col-start-1 row-start-1 col-span-1 row-span-1'>
@@ -44,7 +45,8 @@ const Pricing = () => {
                 <li className='flex flex-row gap-2 text-xl'><FaCheckCircle className='position relative top-1'/>Basic locker access</li>
                 <li className='flex flex-row gap-2 text-xl'><FaCheckCircle className='position relative top-1'/>1 Orientation session</li>
               </ul>
-              <button className="w-[302px] h-[60px] border-2 mt-[48px] border-[#FFFFFF]">SELECT PLAN</button>
+              <button className="w-[302px] h-[60px] border-4 mt-[48px] border-olive-600">SELECT PLAN</button>
+
 
             </div>
           </li>
@@ -79,7 +81,8 @@ const Pricing = () => {
                 <li className='flex flex-row gap-2 text-xl'><FaCheckCircle className='position relative top-1'/>Personnal Coach (2/mo)</li>
                 <li className='flex flex-row gap-2 text-xl'><FaCheckCircle className='position relative top-1'/>Monthly body scans</li>
               </ul>
-              <button className="w-[302px] h-[60px] border-2 mt-[48px] border-[#FFFFFF]">SELECT PLAN</button>
+              <button className="w-[302px] h-[60px] border-4 mt-[48px] border-olive-600">SELECT PLAN</button>
+
             </div>            
           </li>
         </ul>
