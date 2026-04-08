@@ -2,7 +2,8 @@ import React from 'react'
 
 const Pricing = () => {
   return (
-    // Section Hero et Banière
+    <>
+    {/* Section Hero et Banière */}
     <section className='relative w-[1700px] h-[450px] mx-1  py-24 px-120 flex flex-col gap-16 '>
       <div 
         className="absolute inset-0 bg-[url('/pricingCoach4.png')] bg-cover bg-center"
@@ -24,7 +25,37 @@ const Pricing = () => {
       </div>
     </section>
 
-    //
+    {/* Pricing card section */}
+    <section className='text-white'>
+      <div className=''>
+        <ul className='flex flex-row gap-10'>
+          <li>
+            <div>
+              <h1>STARTER</h1> 
+              <div>
+                <h1>$</h1>
+                <h1>49</h1>
+                <h2>/MO</h2>
+              </div>   
+
+            </div>
+          </li>
+          <li>
+            <fieldset>
+              <legend>MOST POPULAR</legend>
+              <h1>PRO</h1>
+            </fieldset>
+          </li>
+          <li>
+            <div>
+              <h1>ELITE</h1>
+            </div>            
+          </li>
+        </ul>
+      </div>
+    </section>
+    </>
+
   )
 }
 
