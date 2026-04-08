@@ -5,7 +5,7 @@ const Pricing = () => {
      // Section Hero et Banière
     <section className='relative w-[1700px] h-[450px] mx-1  py-24 px-120 flex flex-col gap-16 '>
       <div 
-        className="absolute inset-0 bg-[url('/pricingCoach1.png')] bg-cover bg-center"
+        className="absolute inset-0 bg-[url('/pricingCoach4.png')] bg-cover bg-center"
         style={{ opacity: 0.2 }} 
       />
       <div className='relative z-10'>
