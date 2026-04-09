@@ -2,6 +2,7 @@ import React from 'react'
 import { FaCheckCircle } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa6";
 import { MdClose } from "react-icons/md";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Pricing = () => {
   return (
