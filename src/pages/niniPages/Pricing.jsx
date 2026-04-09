@@ -151,7 +151,6 @@ const Pricing = () => {
       </div>
     </section>
 
-
     {/* FAQ Section */}
     <section className="w-[1685px] h-[766px] text-white py-[96px] px-[402px] bg-[#131313]">
       <div className='w-[896px] h-[574px] max-w-[896px] flex flex-col gap-[64px]'>
@@ -195,6 +194,15 @@ const Pricing = () => {
             </li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    {/* Section - Finale CTA */}
+    <section className="w-[1688px] h-[516px] text-white py-[96px] px-[400px] bg-[#E8000D]">
+      <div className='w-[896px] h-[324px] max-w-[728px] flex flex-col gap-[32px]'>
+        <h1 className='w-[896px] h-[144px] font-black text-[72px] leading-[72px] tracking-[-3.6px] text-center'>START YOUR FREE TRIAL TODAY</h1>
+        <h2 className='w-[896px] h-[44px] font-medium text-[20px] leading-[28px] tracking-normal text-center position relative bottom-[16px]'>Experience elite performance with no strings attached for 7 days.</h2>
+        <button className='w-[303.81px] h-[72px] px-[48px] py-[20px] rounded-[4px] border-2 opacity-100 position relative left-[295px]'>GET STARTED NOW</button>
       </div>
     </section>
     </>
