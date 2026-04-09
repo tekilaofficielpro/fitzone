@@ -102,8 +102,8 @@ const Pricing = () => {
             <h2 className='w-[417px] h-[77px] px-[24px] py-[26px] text-[18px] font-bold '>FEATURES</h2>
             <ul className='flex flex-row px-30'>
               <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[18px] font-bold '>STARTER</li>
-              <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold '>PRO</li>
-              <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[18px] font-bold '>ELITE</li>
+              <li className='w-[248px] h-[77px] px-[42px] py-[26px] text-[18px] text-[#E8000D] font-bold '>PRO</li>
+              <li className='w-[248px] h-[77px] px-[15px] py-[26px] text-[18px] font-bold '>ELITE</li>
             </ul>
           </li>
           <li className="w-[1024px] h-[74px] flex flex-row gap-30 text-xl bg-[#1C1B1B]/50">
