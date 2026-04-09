@@ -1,5 +1,7 @@
 import React from 'react'
 import { FaCheckCircle } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa6";
+import { MdClose } from "react-icons/md";
 
 const Pricing = () => {
   return (
@@ -80,6 +82,65 @@ const Pricing = () => {
               </ul>
               <button className="w-[302px] h-[60px] border-4 mt-[48px] border-olive-600">SELECT PLAN</button>
             </div>            
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    {/* Section compare plans */}
+    <section className="w-[1685px] h-[738px] text-white py-[96px] px-[185px] bg-[#0E0E0E]">
+      <div className="w-[1024px] h-[546px] max-w-[1024px] flex flex-row gap-[64px]">     
+        <div className='w-[1024px] h-[40px]'> 
+          <h1 className="w-[320px] h-[240px] font-black text-[36px] text-[#E5E2E1] leading-[40px] tracking-[-1.8px] position relative left-[545px] uppercase">COMPARE PLANS</h1>
+        </div>
+        <ul className='w-[1024px] h-[442px] flex flex-col gap-0 position relative top-[100px] right-[200px]'>
+          <li className="w-[1024px] h-[79px] border-b-2 border-[#E8000D] flex flex-row gap-30 text-xl bg-[#1C1B1B]">
+            <h2 className='w-[417px] h-[77px] px-[24px] py-[26px] text-[18px] font-bold '>FEATURES</h2>
+            <ul className='flex flex-row px-30'>
+              <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[18px] font-bold '>STARTER</li>
+              <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold '>PRO</li>
+              <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[18px] font-bold '>ELITE</li>
+            </ul>
+          </li>
+          <li className="w-[1024px] h-[74px] flex flex-row gap-30 text-xl bg-[#1C1B1B]/50">
+            <h2 className='w-[417px] h-[74px] px-[24px] py-[26px] text-[18px] font-bold'>24/7 Access</h2>
+            <ul className="flex flex-row px-35">
+              <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[#E8000D] text-[18px] font-bold position relative right-[100px] '><FaCheck /></li>
+              <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative right-[100px] '><FaCheck /></li>
+              <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative left-[65px] '><FaCheck /></li>
+            </ul>
+          </li>
+          <li className=" w-[1024px] h-[74px] flex flex-row gap-30 text-xl bg-[#0E0E0E]">
+            <h2 className='w-[417px] h-[74px] px-[24px] py-[26px] text-[18px] font-bold'>Group Classes</h2>
+            <ul className="flex flex-row px-35">
+              <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[18px] text-[#4B5563] font-bold position relative right-[100px]'><MdClose /></li>
+              <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative right-[100px]'><FaCheck /></li>
+              <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative left-[65px]'><FaCheck /></li>
+            </ul>
+          </li>
+          <li className="w-[1024px] h-[74px] flex flex-row gap-30 text-xl bg-[#1C1B1B]/50">
+            <h2 className='w-[417px] h-[74px] px-[24px] py-[26px] text-[18px] font-bold'>Recovery Zone</h2>
+            <ul className=" flex justify-between gap-20 position relative left-[20px]">
+              <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[18px] text-[#4B5563] font-bold position relative right-[100px]'><MdClose /></li>
+              <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative right-[180px]'><FaCheck /></li>
+              <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative right-[95px]'><FaCheck /></li>
+            </ul>
+          </li>
+          <li className="w-[1024px] h-[74px] flex flex-row gap-30 text-xl bg-[#0E0E0E]/50">
+            <h2 className='w-[417px] h-[74px] px-[24px] py-[26px] text-[18px] font-bold'>Personal Coaching</h2>
+            <ul className="flex flex-row px-35">
+              <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[18px] text-[#4B5563] font-bold position relative right-[100px]'><MdClose /></li>
+              <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#4B5563] font-bold position relative right-[100px]'><MdClose /></li>
+              <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative left-[65px]'><FaCheck /></li>
+            </ul>
+          </li>
+          <li className="w-[1024px] h-[74px] flex flex-row gap-30 text-xl bg-[#1C1B1B]/50">
+            <h2 className='w-[417px] h-[74px] px-[24px] py-[26px] text-[18px] font-bold'>Free Guest Passes</h2>
+            <ul className=" flex justify-between gap-20 position relative left-[20px]">
+              <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[18px] text-[#4B5563] font-bold position relative right-[100px]'><MdClose /></li>
+              <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative right-[180px]'><FaCheck /></li>
+              <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative right-[95px]'><FaCheck /></li>
+            </ul>
           </li>
         </ul>
       </div>
