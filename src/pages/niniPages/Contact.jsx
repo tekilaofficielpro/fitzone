@@ -121,7 +121,7 @@ const Contact = () => {
 
     {/* section MAP */}
 
-    <section className='W-[1280PX] h-[829px] py-[96px] bg-[#0E0E0E]'>
+    <section className='h-[829px] py-[96px] bg-[#0E0E0E]'>
       <div className='container mx-auto relative z-10'>
         <div className='text-[#FFFFFF] text-8xl font-bold flex flex-row gap-2'>
           <h1 className="font-black text-[30px] text-[#E5E2E1] leading-[36px] tracking-[-1.5px] align-middle">FIND</h1>
@@ -137,7 +137,7 @@ const Contact = () => {
     {/* section -CTA Banner */}
 
     <section>
-      <div className='w-[1680px] h-[196px] py-[64px] bg-[#E8000D] flex flex-row gap-70 mb-0'>
+      <div className='w-[1680px] h-[196px] py-[48px] bg-[#E8000D] flex flex-row gap-70 mb-0'>
         <h1 className='w-[815px] h-[60px] font-bold text-[60px] text-[#FFFFFF] px-[20px]'>READY TO TRANSFORM?</h1>
         <button className='w-[204px] h-[68px] border-2 border-[#FFFFFF] text-[#FFFFFF] bg-transparent hover:bg-[#FFFFFF] hover:text-[#E8000D] py-[10px] px-[20px] whitespace-nowrap shrink-0 relative top-3'>
           START FREE TRIAL
