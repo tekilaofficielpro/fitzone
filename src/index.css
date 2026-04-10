@@ -2,8 +2,8 @@
 
 :root {
   --primary-color: #131313;
-  --secondary-color: #E8000D;
-  --tertiary-color: #1C1B1B;
+  --secondary-color: #e8000d;
+  --tertiary-color: #1c1b1b;
 }
 
 .bg-primary {
@@ -42,4 +42,20 @@
   border-bottom: 5px solid transparent;
   border-image-source: linear-gradient(to bottom, red, pink);
   border-image-slice: 1;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 2px grey;
+  color: transparent;
+}
+
+.bg-image {
+  background-image: url("./assets/backgroung.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 70vh;
+  transform: scale(1);
+  opacity: 0.8;
 }

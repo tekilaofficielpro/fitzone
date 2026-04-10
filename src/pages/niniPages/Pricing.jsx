@@ -9,7 +9,7 @@ const Pricing = () => {
 
      <>
     {/* Section Hero et Banière */}
-    <section className='relative w-[1680px] h-[450px] mx-1  py-24 px-120 flex flex-col gap-16 '>
+    <section className='container relative w-[1680px] h-[450px] mx-1  py-24 px-120 flex flex-col justify-center items-center gap-16 '>
       <div 
         className="absolute inset-0 bg-[url('/pricingCoach4.png')] bg-cover bg-center"
         style={{ opacity: 0.2 }} 
@@ -31,7 +31,7 @@ const Pricing = () => {
     </section>
 
     {/* Pricing card section */}
-    <section className='w-[1280px] h-[750px] text-white '>
+    <section className='container w-[1280px] h-[750px] text-white'>
 
       <div className='py-[80px] px-[32px] position relative left-[200px] bg-[#131313]'>
         <ul className='w-[1216px] h-[520px] max-w-[1280px] grid grid-rows-1 grid-cols-3 gap-y-8 gap-x-20 opacity-100'>
@@ -93,7 +93,7 @@ const Pricing = () => {
     </section>
 
     {/* Section compare plans */}
-    <section className="w-[1685px] h-[738px] text-white py-[96px] px-[185px] bg-[#0E0E0E]">
+    <section className=" container w-[1685px] h-[738px] text-white py-[96px] px-[185px] bg-[#0E0E0E]">
       <div className="w-[1024px] h-[546px] max-w-[1024px] flex flex-row gap-[64px]">     
         <div className='w-[1024px] h-[40px]'> 
           <h1 className="w-[320px] h-[240px] font-black text-[36px] text-[#E5E2E1] leading-[40px] tracking-[-1.8px] position relative left-[545px] uppercase">COMPARE PLANS</h1>
@@ -152,7 +152,7 @@ const Pricing = () => {
     </section>
 
     {/* FAQ Section */}
-    <section className="w-[1685px] h-[766px] text-white py-[96px] px-[402px] bg-[#131313]">
+    <section className="container w-[1685px] h-[766px] text-white py-[96px] px-[402px] bg-[#131313]">
       <div className='w-[896px] h-[574px] max-w-[896px] flex flex-col gap-[64px]'>
         <div className='w-[896px] h-[40px]'>
           <h1 className='w-[354px] h-[40px]  font-black text-[36px] leading-[40px] tracking-[-1.8px] text-center position relative left-[265px]'>FREQUENTLY ASKED</h1>
@@ -198,7 +198,7 @@ const Pricing = () => {
     </section>
 
     {/* Section - Finale CTA */}
-    <section className="w-[1688px] h-[516px] text-white py-[96px] px-[400px] bg-[#E8000D]">
+    <section className="flex items-center justify-center mx-auto w-full h-[516px] text-white py-[96px] px-[400px] bg-[#E8000D]">
       <div className='w-[896px] h-[324px] max-w-[728px] flex flex-col gap-[32px]'>
         <h1 className='w-[896px] h-[144px] font-black text-[72px] leading-[72px] tracking-[-3.6px] text-center'>START YOUR FREE TRIAL TODAY</h1>
         <h2 className='w-[896px] h-[44px] font-medium text-[20px] leading-[28px] tracking-normal text-center position relative bottom-[16px]'>Experience elite performance with no strings attached for 7 days.</h2>
