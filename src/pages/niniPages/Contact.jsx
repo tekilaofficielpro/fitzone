@@ -140,9 +140,9 @@ const Contact = () => {
     {/* section -CTA Banner */}
 
     <section>
-      <div className='w-full h-[196px] py-[48px] bg-[#E8000D] flex flex-row gap-70 mb-0'>
-        <h1 className='w-[815px] h-[60px] font-bold text-[60px] text-[#FFFFFF] px-[20px]'>READY TO TRANSFORM?</h1>
-        <button className='w-[204px] h-[68px] border-2 border-[#FFFFFF] text-[#FFFFFF] bg-transparent hover:bg-[#FFFFFF] hover:text-[#E8000D] py-[10px] px-[20px] ml-90 whitespace-nowrap shrink-0 relative top-3'>
+      <div className='w-full h-[266px] py-[48px] bg-[#E8000D] flex flex-row gap-70 mb-0'>
+        <h1 className='w-[815px] h-[60px] font-bold text-[60px] text-[#FFFFFF] px-[20px] py-[40px]'>READY TO TRANSFORM?</h1>
+        <button className='w-[204px] h-[68px] border-2 border-[#FFFFFF] text-[#FFFFFF] bg-transparent hover:bg-[#FFFFFF] hover:text-[#E8000D] py-[10px] px-[20px] ml-90 whitespace-nowrap shrink-0 relative top-16'>
           START FREE TRIAL
         </button>
       </div>
