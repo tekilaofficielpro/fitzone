@@ -4,7 +4,7 @@ import { navList } from "../utils/links"
 
 const Navbar = () => {
     return (
-        <header className='bg-[#09090B] py-6 h-20 shadow-xl shadow-red-800/30'>
+        <header className='fixed top-0 left-0 right-0 z-50 bg-[#09090B] py-6 h-20 shadow-xl shadow-red-800/30'>
             <nav className='container font-bold px-4 flex justify-between'>
                 <a href="/">
                     <span className='text-white text-xl'>FITZONE</span>
