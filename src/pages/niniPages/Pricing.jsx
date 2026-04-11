@@ -10,12 +10,12 @@ const Pricing = () => {
 
      <>
     {/* Section Hero et Banière */}
-    <section className='relative h-[450px] py-24 px-75 flex flex-col gap-16 '>
+    <section className='relative h-[700px] py-24 px-75 flex flex-col gap-16 '>
       <div 
         className="absolute inset-0 bg-[url('/pricingCoach4.png')] bg-cover bg-center"
         style={{ opacity: 0.2 }} 
       />
-      <div className='container mx-auto relative z-10'>
+      <div className='container mx-auto relative top-40 left-55 z-10'>
         <div className='text-[#FFFFFF] text-8xl font-bold flex flex-row gap-6'>
           <h1>SIMPLE</h1>
           <div className='flex flex-col'>
@@ -25,7 +25,7 @@ const Pricing = () => {
         </div>
         <h2 className='w-[360px] h-[28px] text-[#A0A0A0] text-[25px] mx-50'>No hidden fees. Cancel anytime.</h2>
       </div>
-      <div className='w-[363px] h-[56px] bg-[#2e2d2d] mx-49 p-4 text-white flex flex-row gap-0 font-bold'>
+      <div className='w-[363px] h-[56px] bg-[#2e2d2d] mx-49 p-4 text-white flex flex-row gap-0 font-bold relative top-40 left-55'>
         <button className='w-[138px] h-[44px] py-3 position relative bottom-2.5'>MONTHLY</button>
         <button className='w-[216px] h-[44px] py-3 bg-[#E8000D] position relative bottom-2.5 left-2'>YEARLY (SAVE 20%)</button>
       </div>
@@ -94,7 +94,7 @@ const Pricing = () => {
     </section>
 
     {/* Section compare plans */}
-    <section className="w-full h-[738px] text-white py-[96px] px-[32px] bg-[#0E0E0E]">
+    <section className="h-[738px] text-white py-[96px] px-[32px] bg-[#0E0E0E]">
       <div className="container h-[546px] max-w-[1024px] flex flex-row gap-[16px]">     
         <div className='w-[1024px] h-[40px]'> 
           <h1 className="w-[320px] h-[240px] font-black text-[36px] text-[#E5E2E1] leading-[40px] tracking-[-1.8px] position relative left-[500px] uppercase">COMPARE PLANS</h1>
@@ -153,10 +153,11 @@ const Pricing = () => {
     </section>
 
     {/* FAQ Section */}
+
     <section className="h-[766px] text-white py-[96px] px-[192px] bg-[#131313]">
       <div className='container mx-auto w-[896px] h-[574px] max-w-[896px] flex flex-col gap-[64px]'>
         <div className='w-[896px] h-[40px]'>
-          <h1 className='w-[354px] h-[40px]  font-black text-[36px] leading-[40px] tracking-[-1.8px] text-center position relative left-[240px]'>FREQUENTLY ASKED</h1>
+          <h1 className='w-[354px] h-[40px]  font-black text-[36px] leading-[40px] tracking-[-1.8px] text-center relative left-[260px]'>FREQUENTLY ASKED</h1>
         </div>
         <div className='w-[896px] h-[470px] max-w-[896px]'>
           <ul className='flex flex-col gap-[16px]'>
@@ -199,7 +200,7 @@ const Pricing = () => {
     </section>
 
     {/* Section - Finale CTA */}
-    <section className="w-full h-[516px] text-white py-[96px] px-[220px] bg-[#E8000D]">
+    <section className="w-full h-[516px] text-white py-[96px] px-[420px] bg-[#E8000D]">
       <div className='container h-[324px] max-w-[728px] flex flex-col gap-[32px]'>
         <h1 className='w-[896px] h-[144px] font-black text-[72px] leading-[72px] tracking-[-3.6px] text-center'>START YOUR FREE TRIAL TODAY</h1>
         <h2 className='w-[896px] h-[44px] font-medium text-[20px] leading-[28px] tracking-normal text-center position relative bottom-[16px]'>Experience elite performance with no strings attached for 7 days.</h2>
