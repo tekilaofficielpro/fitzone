@@ -13,21 +13,21 @@ const Contact = () => {
     <>
     {/* Section hero */}
 
-    <section className='container flex flex-row items-center justify-center h-[409px]'>
+    <section className='container flex flex-row items-center justify-center h-[709px]'>
       <div 
-        className="absolute inset-0 bg-[url('/BG_contact.jpg')] bg-cover bg-center"
+        className="absolute inset-0 bg-[url('/BG_Contact.jpeg')] bg-cover bg-center"
         style={{ opacity: 0.2 }} 
       />
-      <div className='mt-60 relative left-8 top-10'>
+      <div className='mt-20 relative left-8 top-10'>
         <div className='container mx-auto relative z-10'>
-          <div className='text-[#FFFFFF] text-8xl font-bold flex flex-row gap-6'>
+          <div className='text-[#FFFFFF] text-[146px] font-bold flex flex-row gap-6'>
             <h1>GET IN</h1>
             <div className='flex flex-col'>
               <h1 className='z-10 text-[#E8000D]'>TOUCH</h1>
-              <div className='w-[128px] h-[8px] m-5 relative right-20 bg-[#E8000D]'></div>
+              <div className='w-[220px] h-[8px] mb-6 relative right-25 bottom-5 bg-[#E8000D]'></div>
             </div>
           </div>
-          <h2 className='w-[439px] h-[36px] max-w-[444px] text-[#A0A0A0] text-[22px] mx-35'>We're here to help you start your journey.</h2>
+          <h2 className='w-[599px] h-[36px] max-w-[744px] text-[#A0A0A0] text-[25px] mx-35 relative left-20 uppercase'>We're here to help you start your journey.</h2>
         </div>
       </div>
     </section>
@@ -36,7 +36,7 @@ const Contact = () => {
 
     <section className='container h-[870px]'>
       <div className='container mx-2 mt-70'>
-        <ul className='flex flex-rows gap-x-[64px]'>
+        <ul className='flex flex-row gap-x-[64px]'>
           <li>
             <div>
               <ul className='flex flex-col gap-y-[24px]'>
@@ -121,25 +121,28 @@ const Contact = () => {
 
     {/* section MAP */}
 
-    <section className='h-[829px] py-[96px] bg-[#0E0E0E]'>
-      <div className='container mx-auto relative z-10'>
+    <section className='h-[959px] py-[96px] bg-[#0E0E0E]'>
+      <div className='container mx-auto relative right-60 z-10'>
         <div className='text-[#FFFFFF] text-8xl font-bold flex flex-row gap-2'>
           <h1 className="font-black text-[30px] text-[#E5E2E1] leading-[36px] tracking-[-1.5px] align-middle">FIND</h1>
           <div>
             <h1 className="font-black text-[30px] text-[#E8000D] leading-[36px] tracking-[-1.5px] align-middle">US</h1>
           </div>
         </div>
-        <h2 className='w-[1232px] h-[20px] max-w-[444px] text-[#E9BCB6] text-[14px] mt-3'>VIST OUR PERFORMANCE LAB IN THE HEART OF THE CITY</h2>
+        <h2 className='max-w-[444px] text-[#E9BCB6] text-[14px] mt-3'>VIST OUR PERFORMANCE LAB IN THE HEART OF THE CITY</h2>
       </div>
-      <img src="/MAP2.png" alt="Map" className='w-[1600px] h-[500px] my-10 mx-auto'/>
+      <div 
+        className='w-[1800px] h-[660px] my-10 mx-auto'
+        style={{ backgroundImage: "url('/BG_MAP1.jpeg')", backgroundPosition: 'center', backgroundSize: 'cover', brightness: '0.8' }}
+      />
     </section>
 
     {/* section -CTA Banner */}
 
     <section>
-      <div className='w-[1680px] h-[196px] py-[48px] bg-[#E8000D] flex flex-row gap-70 mb-0'>
+      <div className='w-full h-[196px] py-[48px] bg-[#E8000D] flex flex-row gap-70 mb-0'>
         <h1 className='w-[815px] h-[60px] font-bold text-[60px] text-[#FFFFFF] px-[20px]'>READY TO TRANSFORM?</h1>
-        <button className='w-[204px] h-[68px] border-2 border-[#FFFFFF] text-[#FFFFFF] bg-transparent hover:bg-[#FFFFFF] hover:text-[#E8000D] py-[10px] px-[20px] whitespace-nowrap shrink-0 relative top-3'>
+        <button className='w-[204px] h-[68px] border-2 border-[#FFFFFF] text-[#FFFFFF] bg-transparent hover:bg-[#FFFFFF] hover:text-[#E8000D] py-[10px] px-[20px] ml-90 whitespace-nowrap shrink-0 relative top-3'>
           START FREE TRIAL
         </button>
       </div>
