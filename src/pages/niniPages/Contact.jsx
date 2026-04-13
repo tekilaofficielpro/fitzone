@@ -11,7 +11,6 @@ const Contact = () => {
   const formRef   = useScrollReveal()
   return (
     <>
-    <style>{}</style>
 
     {/* Section hero */}
     <SectionHero />
