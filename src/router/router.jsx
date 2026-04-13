@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Home from "../pages/home/Home";
 import Classes from "../pages/niniPages/classes/Classes";
-import Coaches from "../pages/niniPages/Coaches";
+import Coaches from "../pages/niniPages/coaches/Coaches";
 import Pricing from "../pages/niniPages/Pricing";
 import Contact from "../pages/niniPages/Contact";
 

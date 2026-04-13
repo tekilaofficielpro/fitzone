@@ -34,6 +34,9 @@
   border-color: var(--secondary-color);
 }
 
+.border-tertiary {
+  border-color: var(--tertiary-color)
+}
 .container {
   @apply mx-auto md:max-w-7xl max-w-6xl;
 }
