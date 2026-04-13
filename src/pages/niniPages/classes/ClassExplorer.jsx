@@ -1,10 +1,20 @@
+import { useEffect, useRef } from "react";
+import { classExplorerAnimation } from "../../../components/animations/pageTrasition";
 import class5 from "../../../assets/class5.png"
 import class6 from "../../../assets/class6.png"
 import class7 from "../../../assets/class7.png"
 
 const ClassExplorer = () => {
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        if (containerRef.current) {
+            classExplorerAnimation(containerRef.current);
+        }
+    }, []);
+
     return (
-        <section className="container">
+        <section className="container" ref={containerRef}>
             <h1 className="text-white text-2xl px-4 md:text-3xl ">CLASS EXPLORER</h1>
             <hr className="w-30 border-t-5 border-red-700 mx-4 mt-3" />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 ">

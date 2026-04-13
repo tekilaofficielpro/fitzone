@@ -1,10 +1,20 @@
 import coach1 from '../../assets/coach1.png'
 import coach2 from '../../assets/coach2.png'
 import coach3 from '../../assets/coach3.png'
+import { useEffect, useRef } from 'react'
+import { commandersAnimation } from '../../components/animations/pageTrasition'
 
 const Commanders = () => {
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        if (containerRef.current) {
+            commandersAnimation(containerRef.current);
+        }
+    }, []);
+
     return (
-        <section className="container">
+        <section className="container" ref={containerRef}>
             <h1 className='text-white text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold text-center'>THE COMMANDERS</h1>
             {/* card  */}
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 place-items-center md:place-items-start gap-6 mt-10'>

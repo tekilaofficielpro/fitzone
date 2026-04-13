@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { headerCoachAnimation } from '../../../components/animations/pageTrasition'
 
 const HeaderCoach = () => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      headerCoachAnimation(containerRef.current);
+    }
+  }, []);
+
   return (
-    <section className='h-[60vh] flex flex-col justify-center items-center space-y-4 relative'>
+    <section className='h-[60vh] flex flex-col justify-center items-center space-y-4 relative' ref={containerRef}>
       <h1 className='text-xl sm:text-5xl md:text-7xl text-white text-center'>MEET OUR COACHES</h1>
       <hr className="w-60 sm:w-120 md:w-200 border-t-5 border-red-500" />
       <p className='text-red-400 text-sm'>Expert trainers dedicated to your transformation.</p>

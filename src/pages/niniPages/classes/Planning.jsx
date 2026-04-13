@@ -1,14 +1,23 @@
 import trainingSchedule from "../../../utils/training"
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { planningAnimation } from "../../../components/animations/pageTrasition";
 
 const Planning = () => {
     const [selectedFilter, setSelectedFilter] = useState("ALL TYPES");
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        if (containerRef.current) {
+            planningAnimation(containerRef.current);
+        }
+    }, []);
+
     const today = new Date().toLocaleDateString("en-US", {
         weekday: "long"
     });
     const filterOptions = ["ALL TYPES", "CARDIO", "STRENGTH", "HIIT", "RECOVERY"];
     return (
-        <section className="container">
+        <section className="container" ref={containerRef}>
             {/* menu  */}
             <div className="flex flex-col sm:flex-col md:flex-row md:justify-between gap-4 md:gap-0 items-start md:items-center">
                 <div>
