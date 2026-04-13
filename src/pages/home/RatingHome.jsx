@@ -4,8 +4,8 @@ import { FaQuoteRight } from "react-icons/fa";
 const RatingHome = () => {
     return (
         <section className="flex flex-row justify-center bg-tertiary  my-10">
-            <div className="grid grid-cols-1 md:grid-cols-3 p-20 gap-10">
-                <div className="border-l-2 border-red-500 bg-primary w-100 h-70 rounded p-10 space-y-9">
+            <div className="grid grid-cols-1 md:grid-cols-3 p-5 md:p-20 gap-5 md:gap-10 w-full md:w-auto">
+                <div className="border-l-2 border-red-500 bg-primary w-full md:w-100 h-auto md:h-70 rounded p-5 md:p-10 space-y-9">
                     <div className="flex justify-between">
                         <div className="flex flex-row gap-1">
                             <span className="text-secondary"><FaStar /></span>
@@ -23,7 +23,7 @@ const RatingHome = () => {
                     <span className="text-secondary font-bold text-center block mt-4">JAMES RODRIGUEZ</span>
                 </div>
 
-                <div className="border-l-2 border-red-500 bg-primary w-100 h-70 rounded p-10 space-y-9">
+                <div className="border-l-2 border-red-500 bg-primary w-full md:w-100 h-auto md:h-70 rounded p-5 md:p-10 space-y-9">
                     <div className="flex justify-between">
                         <div className="flex flex-row gap-1">
                             <span className="text-secondary"><FaStar /></span>
@@ -41,7 +41,7 @@ const RatingHome = () => {
                     <span className="text-secondary font-bold text-center block mt-4">ELENA FISHER</span>
                 </div>
 
-                <div className="border-l-2 border-red-500 bg-primary w-100 h-70 rounded p-10 space-y-9">
+                <div className="border-l-2 border-red-500 bg-primary w-full md:w-100 h-auto md:h-70 rounded p-5 md:p-10 space-y-9">
                     <div className="flex justify-between">
                         <div className="flex flex-row gap-1">
                             <span className="text-secondary"><FaStar /></span>
