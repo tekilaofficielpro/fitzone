@@ -1,85 +1,13 @@
-import React, { useEffect, useRef } from 'react'
-import { FaCheckCircle } from "react-icons/fa";
-import { FaCheck } from "react-icons/fa6";
-import { MdClose } from "react-icons/md";
-import { IoIosArrowDown } from "react-icons/io";
+import { useEffect} from 'react'
+import HeroSection from './miniPagePricing/HeroSection';
+import { PricingCard } from './miniPagePricing/PricingCard';
+import { ComparePlan } from './miniPagePricing/ComparePlan';
+import { SectionFAQ } from './miniPagePricing/SectionFAQ';
+import { SectionFinal } from './miniPagePricing/SectionFinal';
 
-/* ── Animations CSS injectées une seule fois ── */
-const styles = `
-  @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-40px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-  @keyframes scaleIn {
-    from { opacity: 0; transform: scale(0.92); }
-    to   { opacity: 1; transform: scale(1); }
-  }
-  @keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-40px); }
-    to   { opacity: 1; transform: translateX(0); }
-  }
-  @keyframes slideInRight {
-    from { opacity: 0; transform: translateX(40px); }
-    to   { opacity: 1; transform: translateX(0); }
-  }
-  @keyframes underlineGrow {
-    from { transform: scaleX(0); }
-    to   { transform: scaleX(1); }
-  }
-  @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 40px 0 #E8000D40; }
-    50%       { box-shadow: 0 0 60px 10px #E8000D80; }
-  }
-
-  .anim-hero-title   { animation: fadeInDown 0.8s ease both; }
-  .anim-hero-sub     { animation: fadeInUp  0.8s ease 0.3s both; }
-  .anim-hero-bar     { animation: underlineGrow 0.6s ease 0.5s both; transform-origin: left; }
-  .anim-hero-toggle  { animation: fadeInUp  0.7s ease 0.5s both; }
-
-  .anim-card-left    { animation: slideInLeft 0.7s ease both; }
-  .anim-card-center  { animation: scaleIn    0.7s ease 0.15s both; }
-  .anim-card-right   { animation: slideInRight 0.7s ease 0.05s both; }
-
-  .anim-card-left,
-  .anim-card-center,
-  .anim-card-right   { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-  .anim-card-left:hover,
-  .anim-card-right:hover { transform: translateY(-6px); box-shadow: 0 12px 32px #00000060; }
-  .anim-card-center:hover { transform: translateY(-6px) scale(1.01); }
-  .anim-card-center  { animation: scaleIn 0.7s ease 0.15s both, pulse-glow 3s ease-in-out 1s infinite; }
-
-  .anim-row { opacity: 0; transform: translateX(-20px); transition: opacity 0.5s ease, transform 0.5s ease; }
-  .anim-row.visible { opacity: 1; transform: translateX(0); }
-
-  .anim-faq { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
-  .anim-faq.visible { opacity: 1; transform: translateY(0); }
-
-  .anim-cta { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .anim-cta.visible { opacity: 1; transform: translateY(0); }
-
-  .btn-select { transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease; }
-  .btn-select:hover { background: #E8000D; color: #fff; transform: scale(1.03); }
-
-  .btn-pro { transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease; }
-  .btn-pro:hover { background: #f0f0f0; transform: scale(1.03); }
-
-  .btn-cta { transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease; }
-  .btn-cta:hover { background: #fff; color: #E8000D; transform: scale(1.04); }
-
-  .toggle-btn { transition: background 0.25s ease, color 0.25s ease; }
-  .toggle-btn:hover { background: #E8000D; color: #fff; }
-`;
 
 /* ── Hook scroll reveal ── */
-function useScrollReveal(selector) {
+function useScrollReveal(selector) { // fait en sorte que les éléments avec la classe "anim-row" deviennent visibles lorsqu'ils entrent dans la fenêtre de visualisation
   useEffect(() => {
     const els = document.querySelectorAll(selector);
     const observer = new IntersectionObserver(
@@ -98,207 +26,20 @@ const Pricing = () => {
 
   return (
     <>
-      <style>{styles}</style>
-
       {/* Section Hero et Banière */}
-      <section className='relative h-[700px] py-24 px-75 flex flex-col gap-16'>
-        <div
-          className="absolute inset-0 bg-[url('/pricingCoach4.png')] bg-cover bg-center"
-          style={{ opacity: 0.2 }}
-        />
-        <div className='container mx-auto relative top-40 left-55 z-10'>
-          <div className='text-[#FFFFFF] text-8xl font-bold flex flex-row gap-6 anim-hero-title'>
-            <h1>SIMPLE</h1>
-            <div className='flex flex-col'>
-              <h1 className='z-10'>PRICING</h1>
-              <div className='w-[380px] h-[12px] position relative bottom-4 bg-[#E8000D] anim-hero-bar'></div>
-            </div>
-          </div>
-          <h2 className='w-[360px] h-[28px] text-[#A0A0A0] text-[25px] mx-50 anim-hero-sub'>No hidden fees. Cancel anytime.</h2>
-        </div>
-        <div className='w-[363px] h-[56px] bg-[#2e2d2d] mx-49 p-4 text-white flex flex-row gap-0 font-bold relative top-40 left-55 anim-hero-toggle'>
-          <button className='w-[138px] h-[44px] py-3 position relative bottom-2.5 toggle-btn'>MONTHLY</button>
-          <button className='w-[216px] h-[44px] py-3 bg-[#E8000D] position relative bottom-2.5 left-2 toggle-btn'>YEARLY (SAVE 20%)</button>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Pricing card section */}
-      <section className='container h-[750px] text-white'>
-        <div className='py-[80px] px-[8px] position bg-[#131313]'>
-          <ul className='w-[1216px] h-[520px] max-w-[1280px] grid grid-rows-1 grid-cols-3 gap-y-8 gap-x-10 opacity-100 relative left-[25px]'>
-
-            {/* STARTER */}
-            <li className='w-[384px] h-[525px] flex justify-between p-10 border-1 border-olive-600 opacity-100 col-start-1 row-start-1 col-span-1 row-span-1 anim-card-left'>
-              <div className="">
-                <h1 className="w-[302px] h-[32px] mb-2.5 font-bold text-[24px] leading-[32px] tracking-[-1.2px] align-middle uppercase">STARTER</h1>
-                <div className='flex flex-row gap-2'>
-                  <h1 className="w-[23px] h-[42px] position relative top-[52px] font-['Space_Grotesk'] font-black text-[36px] leading-[40px] tracking-normal align-middle">$</h1>
-                  <h1 className="w-[123px] h-[101px] position relative right-[10px] font-black text-[96px] leading-[96px] tracking-normal align-middle">49</h1>
-                  <h2 className="w-[33px] h-[25px] position relative top-[67px] right-[15px] font-['Space_Grotesk'] font-bold text-[16px] leading-[24px] tracking-normal align-middle">/MO</h2>
-                </div>
-                <ul className='w-[319px] h-[160px] pt-[8px] mt-[32px] flex flex-col gap-[32px]'>
-                  <li className='flex flex-row gap-2 text-xl'><FaCheckCircle className='position relative top-1'/>Access to gym floor</li>
-                  <li className='flex flex-row gap-2 text-xl'><FaCheckCircle className='position relative top-1'/>Basic locker access</li>
-                  <li className='flex flex-row gap-2 text-xl'><FaCheckCircle className='position relative top-1'/>1 Orientation session</li>
-                </ul>
-                <button className="w-[302px] h-[60px] border-4 mt-[48px] border-olive-600 btn-select">SELECT PLAN</button>
-              </div>
-            </li>
-
-            {/* PRO */}
-            <li className='w-[404px] h-[610px] bg-[#E8000D] shadow-[0_0_40px_0_#E8000D40] flex justify-between p-10 opacity-100 col-start-2 row-start-1 col-span-1 row-span-1 anim-card-center'>
-              <fieldset>
-                <legend className="w-[158px] py-2 text-center position relative bottom-[60px] bg-[#000000]">MOST POPULAR</legend>
-                <h1 className="w-[302px] h-[32px] font-bold text-[24px] leading-[32px] tracking-[-1.2px] align-middle uppercase position relative bottom-[40px]">PRO</h1>
-                <div className='flex flex-row gap-2'>
-                  <h1 className="w-[23px] h-[42px] position relative top-[52px] font-['Space_Grotesk'] font-black text-[36px] leading-[40px] tracking-normal align-middle">$</h1>
-                  <h1 className="w-[123px] h-[101px] position relative right-[10px] font-black text-[96px] leading-[96px] tracking-normal align-middle">89</h1>
-                  <h2 className="w-[33px] h-[25px] position relative top-[67px] right-[15px] font-['Space_Grotesk'] font-bold text-[16px] leading-[24px] tracking-normal align-middle">/MO</h2>
-                </div>
-                <ul className='w-[319px] h-[160px] pt-[8px] mt-[32px] flex flex-col gap-[32px]'>
-                  <li className='flex flex-row gap-2 text-xl'><FaCheckCircle className='position relative top-1'/>Everything in Starter</li>
-                  <li className='flex flex-row gap-2 text-xl'><FaCheckCircle className='position relative top-1'/>Unlimited group classes</li>
-                  <li className='flex flex-row gap-2 text-xl'><FaCheckCircle className='position relative top-1'/>Recovery zone access</li>
-                  <li className='flex flex-row gap-2 text-xl'><FaCheckCircle className='position relative top-1'/>Nutrition guide</li>
-                </ul>
-                <button className="w-[319px] h-[67px] py-[20px] px-[24px] mt-[96px] bg-[#FFFFFF] btn-pro">
-                  <p className="h-[25px] text-[16px] leading-[24px] tracking-[-0.8px] text-center text-[#E8000D] align-middle uppercase font-bold">CHOOSE PRO</p>
-                </button>
-              </fieldset>
-            </li>
-
-            {/* ELITE */}
-            <li className='w-[384px] h-[525px] flex justify-between p-10 border-1 border-olive-600 opacity-100 col-start-3 row-start-1 col-span-1 row-span-1 anim-card-right'>
-              <div>
-                <h1 className="w-[302px] h-[32px] mb-2.5 font-bold text-[24px] leading-[32px] tracking-[-1.2px] align-middle uppercase">ELITE</h1>
-                <div className='flex flex-row gap-2'>
-                  <h1 className="w-[23px] h-[42px] position relative top-[52px] font-['Space_Grotesk'] font-black text-[36px] leading-[40px] tracking-normal align-middle">$</h1>
-                  <h1 className="w-[123px] h-[101px] position relative right-[10px] font-black text-[96px] leading-[96px] tracking-normal align-middle">149</h1>
-                  <h2 className="w-[33px] h-[25px] position relative top-[67px] left-[30px] font-['Space_Grotesk'] font-bold text-[16px] leading-[24px] tracking-normal align-middle">/MO</h2>
-                </div>
-                <ul className='w-[319px] h-[160px] pt-[8px] mt-[32px] flex flex-col gap-[32px]'>
-                  <li className='flex flex-row gap-2 text-xl'><FaCheckCircle className='position relative top-1'/>Everything in pro</li>
-                  <li className='flex flex-row gap-2 text-xl'><FaCheckCircle className='position relative top-1'/>Personnal Coach (2/mo)</li>
-                  <li className='flex flex-row gap-2 text-xl'><FaCheckCircle className='position relative top-1'/>Monthly body scans</li>
-                </ul>
-                <button className="w-[302px] h-[60px] border-4 mt-[48px] border-olive-600 btn-select">SELECT PLAN</button>
-              </div>
-            </li>
-
-          </ul>
-        </div>
-      </section>
+      <PricingCard />
 
       {/* Section compare plans */}
-      <section className="h-[738px] text-white py-[96px] px-[32px] bg-[#0E0E0E]">
-        <div className="container h-[546px] max-w-[1024px] flex flex-row gap-[16px]">
-          <div className='w-[1024px] h-[40px]'>
-            <h1 className="w-[320px] h-[240px] font-black text-[36px] text-[#E5E2E1] leading-[40px] tracking-[-1.8px] position relative left-[500px] uppercase anim-row">COMPARE PLANS</h1>
-          </div>
-          <ul className='w-[1024px] h-[442px] flex flex-col gap-0 position relative top-[100px] right-[200px]'>
-            {[
-              { label: 'FEATURES', isHeader: true },
-              { label: '24/7 Access' },
-              { label: 'Group Classes' },
-              { label: 'Recovery Zone' },
-              { label: 'Personal Coaching' },
-              { label: 'Free Guest Passes' },
-            ].map((_, i) => null)}
-
-            <li className="w-[1024px] h-[79px] border-b-2 border-[#E8000D] flex flex-row gap-30 text-xl bg-[#1C1B1B] anim-row" style={{ transitionDelay: '0ms' }}>
-              <h2 className='w-[417px] h-[77px] px-[24px] py-[26px] text-[18px] font-bold'>FEATURES</h2>
-              <ul className='flex flex-row px-30'>
-                <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[18px] font-bold'>STARTER</li>
-                <li className='w-[248px] h-[77px] px-[42px] py-[26px] text-[18px] text-[#E8000D] font-bold'>PRO</li>
-                <li className='w-[248px] h-[77px] px-[15px] py-[26px] text-[18px] font-bold'>ELITE</li>
-              </ul>
-            </li>
-            <li className="w-[1024px] h-[74px] flex flex-row gap-30 text-xl bg-[#1C1B1B]/50 anim-row" style={{ transitionDelay: '80ms' }}>
-              <h2 className='w-[417px] h-[74px] px-[24px] py-[26px] text-[18px] font-bold'>24/7 Access</h2>
-              <ul className="flex flex-row px-35">
-                <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[#E8000D] text-[18px] font-bold position relative right-[100px]'><FaCheck /></li>
-                <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative right-[100px]'><FaCheck /></li>
-                <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative left-[65px]'><FaCheck /></li>
-              </ul>
-            </li>
-            <li className="w-[1024px] h-[74px] flex flex-row gap-30 text-xl bg-[#0E0E0E] anim-row" style={{ transitionDelay: '160ms' }}>
-              <h2 className='w-[417px] h-[74px] px-[24px] py-[26px] text-[18px] font-bold'>Group Classes</h2>
-              <ul className="flex flex-row px-35">
-                <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[18px] text-[#4B5563] font-bold position relative right-[100px]'><MdClose /></li>
-                <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative right-[100px]'><FaCheck /></li>
-                <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative left-[65px]'><FaCheck /></li>
-              </ul>
-            </li>
-            <li className="w-[1024px] h-[74px] flex flex-row gap-30 text-xl bg-[#1C1B1B]/50 anim-row" style={{ transitionDelay: '240ms' }}>
-              <h2 className='w-[417px] h-[74px] px-[24px] py-[26px] text-[18px] font-bold'>Recovery Zone</h2>
-              <ul className="flex justify-between gap-20 position relative left-[20px]">
-                <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[18px] text-[#4B5563] font-bold position relative right-[100px]'><MdClose /></li>
-                <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative right-[180px]'><FaCheck /></li>
-                <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative right-[95px]'><FaCheck /></li>
-              </ul>
-            </li>
-            <li className="w-[1024px] h-[74px] flex flex-row gap-30 text-xl bg-[#0E0E0E]/50 anim-row" style={{ transitionDelay: '320ms' }}>
-              <h2 className='w-[417px] h-[74px] px-[24px] py-[26px] text-[18px] font-bold'>Personal Coaching</h2>
-              <ul className="flex flex-row px-35">
-                <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[18px] text-[#4B5563] font-bold position relative right-[100px]'><MdClose /></li>
-                <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#4B5563] font-bold position relative right-[100px]'><MdClose /></li>
-                <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative left-[65px]'><FaCheck /></li>
-              </ul>
-            </li>
-            <li className="w-[1024px] h-[74px] flex flex-row gap-30 text-xl bg-[#1C1B1B]/50 anim-row" style={{ transitionDelay: '400ms' }}>
-              <h2 className='w-[417px] h-[74px] px-[24px] py-[26px] text-[18px] font-bold'>Free Guest Passes</h2>
-              <ul className="flex justify-between gap-20 position relative left-[20px]">
-                <li className='w-[248px] h-[77px] px-[24px] py-[26px] text-[18px] text-[#4B5563] font-bold position relative right-[100px]'><MdClose /></li>
-                <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative right-[180px]'><FaCheck /></li>
-                <li className='h-[77px] px-[24px] py-[26px] text-[18px] text-[#E8000D] font-bold position relative right-[95px]'><FaCheck /></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <ComparePlan />
 
       {/* FAQ Section */}
-      <section className="h-[766px] text-white py-[96px] px-[192px] bg-[#131313]">
-        <div className='container mx-auto w-[896px] h-[574px] max-w-[896px] flex flex-col gap-[64px]'>
-          <div className='w-[896px] h-[40px]'>
-            <h1 className='w-[354px] h-[40px] font-black text-[36px] leading-[40px] tracking-[-1.8px] text-center relative left-[260px] anim-faq'>FREQUENTLY ASKED</h1>
-          </div>
-          <div className='w-[896px] h-[470px] max-w-[896px]'>
-            <ul className='flex flex-col gap-[16px]'>
-              <li className='w-[896px] h-[146px] border-[1px] rounded-[4px] border-[#FFFFFF]/5 p-[24px] flex flex-col gap-[16px] bg-[#1C1B1B] anim-faq' style={{ transitionDelay: '100ms' }}>
-                <div className='w-[846px] h-[28px] justify-between flex flex-row'>
-                  <h1 className="w-[415px] h-[28px] font-bold text-[18px] leading-[28px] tracking-[-0.45px]">CAN I CANCEL MY SUBSCRIPTION AT ANY TIME?</h1>
-                  <IoIosArrowDown className='text-[#E8000D]'/>
-                </div>
-                <p className='w-[846px] h-[52px] font-normal text-[16px] text-[#A0A0A0] leading-[26px] tracking-normal'>Yes, all of our plans are commitment-free on a month-to-month basis. You can cancel through your dashboard with a 30-day notice period.</p>
-              </li>
-              <li className='w-[896px] h-[146px] border-[1px] rounded-[4px] border-[#FFFFFF]/5 p-[24px] flex flex-col gap-[16px] bg-[#1C1B1B] anim-faq' style={{ transitionDelay: '200ms' }}>
-                <div className='w-[846px] h-[28px] justify-between flex flex-row'>
-                  <h1 className="w-[415px] h-[28px] font-bold text-[18px] leading-[28px] tracking-[-0.45px]">ARE THERE ANY JOINING FEES?</h1>
-                  <IoIosArrowDown className='text-[#E8000D]'/>
-                </div>
-                <p className='w-[846px] h-[52px] font-normal text-[16px] text-[#A0A0A0] leading-[26px] tracking-normal'>Absolutely not. We believe in transparency. The price you see is the price you pay, with no hidden sign-up or administration costs.</p>
-              </li>
-              <li className='w-[896px] h-[146px] border-[1px] rounded-[4px] border-[#FFFFFF]/5 p-[24px] flex flex-col gap-[16px] bg-[#1C1B1B] anim-faq' style={{ transitionDelay: '300ms' }}>
-                <div className='w-[846px] h-[28px] justify-between flex flex-row'>
-                  <h1 className="w-[415px] h-[28px] font-bold text-[18px] leading-[28px] tracking-[-0.45px]">DO YOU OFFER STUDENT DISCOUNTS?</h1>
-                  <IoIosArrowDown className='text-[#E8000D]'/>
-                </div>
-                <p className='w-[846px] h-[52px] font-normal text-[16px] text-[#A0A0A0] leading-[26px] tracking-normal'>We offer a 15% discount for verified students on our Pro plan. Bring your valid student ID to any of our locations to activate this rate.</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      <SectionFAQ />
 
       {/* Section - Finale CTA */}
-      <section className="w-full h-[516px] text-white py-[96px] px-[420px] bg-[#E8000D]">
-        <div className='container h-[324px] max-w-[728px] flex flex-col gap-[32px]'>
-          <h1 className='w-[896px] h-[144px] font-black text-[72px] leading-[72px] tracking-[-3.6px] text-center anim-cta'>START YOUR FREE TRIAL TODAY</h1>
-          <h2 className='w-[896px] h-[44px] font-medium text-[20px] leading-[28px] tracking-normal text-center position relative bottom-[16px] anim-cta' style={{ transitionDelay: '150ms' }}>Experience elite performance with no strings attached for 7 days.</h2>
-          <button className='w-[303.81px] h-[72px] px-[48px] py-[20px] rounded-[4px] border-2 opacity-100 position relative left-[295px] anim-cta btn-cta' style={{ transitionDelay: '300ms' }}>GET STARTED NOW</button>
-        </div>
-      </section>
+      <SectionFinal />
     </>
   )
 }
