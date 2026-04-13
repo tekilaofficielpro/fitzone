@@ -1,9 +1,19 @@
 import coach7 from '../../../assets/coach7.png'
 import { FaQuoteRight } from "react-icons/fa";
+import { useEffect, useRef } from 'react';
+import { featuredCoachAnimation } from '../../../components/animations/pageTrasition';
 
 const FeaturedCoach = () => {
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        if (containerRef.current) {
+            featuredCoachAnimation(containerRef.current);
+        }
+    }, []);
+
     return (
-        <section className="relative container flex flex-col md:flex-row h-auto md:h-200 gap-4 md:gap-8 justify-center mt-10 border border-tertiary bg-linear-to-r from-[#1c1b1b] to-[#1c1b1b]/10 min-h-auto md:min-h-125 px-4 sm:px-6 md:px-0">
+        <section className="relative container flex flex-col md:flex-row h-auto md:h-200 gap-4 md:gap-8 justify-center mt-10 border border-tertiary bg-linear-to-r from-[#1c1b1b] to-[#1c1b1b]/10 min-h-auto md:min-h-125 px-4 sm:px-6 md:px-0" ref={containerRef}>
             <hr className="absolute w-40 sm:w-60 md:w-80 border-t-5 right-0 top-0" style={{ borderImage: 'linear-gradient(to right, #ef4444, transparent) 1' }} />
             <div className='w-full md:w-1/2 lg:w-1/2 relative h-75 sm:h-90 md:h-full'>
                 <img src={coach7} alt="coach 7" className='grayscale w-full h-full object-cover' />

@@ -1,10 +1,20 @@
 import coach4 from "../../../assets/coach4.png"
 import coach5 from "../../../assets/coach5.png"
 import coach6 from "../../../assets/coach6.png"
+import { useEffect, useRef } from "react"
+import { cardCoachAnimation } from "../../../components/animations/pageTrasition"
 
 const CardCoach = () => {
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        if (containerRef.current) {
+            cardCoachAnimation(containerRef.current);
+        }
+    }, []);
+
     return (
-        <section className="bg-tertiary">
+        <section className="bg-tertiary" ref={containerRef}>
             <div className="grid grid-cols-1 md:grid-cols-3 py-5 container space-y-4">
                 <div className="relative w-80 group mx-auto">
                     <img

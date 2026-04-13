@@ -1,10 +1,20 @@
 import { FaStar } from "react-icons/fa";
 import { FaQuoteRight } from "react-icons/fa";
+import { useEffect, useRef } from "react";
+import { ratingHomeAnimation } from "../../components/animations/pageTrasition";
 
 const RatingHome = () => {
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        if (containerRef.current) {
+            ratingHomeAnimation(containerRef.current);
+        }
+    }, []);
+
     return (
         <section className="flex flex-row justify-center bg-tertiary  my-10">
-            <div className="grid grid-cols-1 md:grid-cols-3 p-5 md:p-20 gap-5 md:gap-10 w-full md:w-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 p-5 md:p-20 gap-5 md:gap-10 w-full md:w-auto" ref={containerRef}>
                 <div className="border-l-2 border-red-500 bg-primary w-full md:w-100 h-auto md:h-70 rounded p-5 md:p-10 space-y-9">
                     <div className="flex justify-between">
                         <div className="flex flex-row gap-1">

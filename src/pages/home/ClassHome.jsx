@@ -1,13 +1,23 @@
 import { Link } from 'react-router-dom'
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
+import { useEffect, useRef } from 'react';
+import { classHomeAnimation } from '../../components/animations/pageTrasition';
 import class1 from '../../assets/class1.png'
 import class2 from '../../assets/class2.png'
 import class3 from '../../assets/class3.png'
 
 const ClassHome = () => {
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        if (containerRef.current) {
+            classHomeAnimation(containerRef.current);
+        }
+    }, []);
+
     return (
-        <div className='container '>
+        <div className='container ' ref={containerRef}>
             <div className='flex justify-between mt-8 sm:mt-10 md:mt-50 xl:mt-10 px-2'>
                 <h1 className="text-white text-xl sm:text-4xl xl:text-7xl font-bold ">OUR CLASSES</h1>
                 <span>
@@ -19,7 +29,7 @@ const ClassHome = () => {
             </div>
             {/* card  */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center md:place-items-start'>
-                <div className="relative mt-10 " style={{
+                <div className="relative mt-10 hover:scale-110 hover:duration-900" style={{
                     clipPath: "polygon(10% 0, 85% 0, 100% 100%, 0% 100%)"
                 }}>
                     <img src={class1} alt="" className="w-md object-cover grayscale" />
@@ -38,7 +48,7 @@ const ClassHome = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="relative mt-10" style={{
+                <div className="relative mt-10 hover:scale-110 hover:duration-900" style={{
                     clipPath: "polygon(10% 0, 90% 0, 100% 100%, 0% 100%)"
                 }}>
                     <img src={class2} alt="" className="w-md object-cover grayscale" />
@@ -57,7 +67,7 @@ const ClassHome = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="relative mt-10" style={{
+                <div className="relative mt-10 hover:scale-110 hover:duration-900" style={{
                     clipPath: "polygon(10% 0, 85% 0, 100% 100%, 0% 100%)"
                 }}>
                     <img src={class3} alt="" className="w-md object-cover grayscale" />
