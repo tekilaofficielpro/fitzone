@@ -8,17 +8,18 @@ import class3 from '../../assets/class3.png'
 const ClassHome = () => {
     return (
         <div className='container '>
-            <div className='flex justify-between mt-30'>
-                <h1 className="text-white text-7xl font-bold ">OUR CLASSES</h1>
+            <div className='flex justify-between mt-8 sm:mt-10 md:mt-50 xl:mt-10 px-2'>
+                <h1 className="text-white text-xl sm:text-4xl xl:text-7xl font-bold ">OUR CLASSES</h1>
                 <span>
-                    <Link to="/classes" className="text-secondary text-xl font-bold mt-5 inline-block underline underline-offset-8">
+                    <Link to="/classes" className="text-secondary text-sm sm:text-xl font-bold sm:mt-2 md:mt-4 inline-block underline underline-offset-8">
                         <span>EXPLORE ALL CLASSES</span>
                         <FaLongArrowAltRight className="inline-block ml-2" />
                     </Link>
                 </span>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-3'>
-                <div className="relative mt-10" style={{
+            {/* card  */}
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center md:place-items-start'>
+                <div className="relative mt-10 " style={{
                     clipPath: "polygon(10% 0, 85% 0, 100% 100%, 0% 100%)"
                 }}>
                     <img src={class1} alt="" className="w-md object-cover grayscale" />

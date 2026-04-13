@@ -5,8 +5,8 @@ import coach6 from "../../../assets/coach6.png"
 const CardCoach = () => {
     return (
         <section className="bg-tertiary">
-            <div className="grid grid-cols-1 md:grid-cols-3 py-5 container">
-                <div className="relative w-80 group">
+            <div className="grid grid-cols-1 md:grid-cols-3 py-5 container space-y-4">
+                <div className="relative w-80 group mx-auto">
                     <img
                         src={coach5}
                         alt="Coach 5"
@@ -24,7 +24,7 @@ const CardCoach = () => {
                     </div>
                 </div>
 
-                <div className="relative w-80 group">
+                <div className="relative w-80 group mx-auto">
                     <img
                         src={coach4}
                         alt="Coach 4"
@@ -42,7 +42,7 @@ const CardCoach = () => {
                     </div>
                 </div>
 
-                <div className="relative w-80 group">
+                <div className="relative w-80 group mx-auto">
                     <img
                         src={coach6}
                         alt="Coach 6"

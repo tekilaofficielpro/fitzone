@@ -5,11 +5,11 @@ import class7 from "../../../assets/class7.png"
 const ClassExplorer = () => {
     return (
         <section className="container">
-            <h1 className="text-white text-3xl ">CLASS EXPLORER</h1>
-            <hr className="w-30 border-t-5 border-red-700 mt-3" />
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            <h1 className="text-white text-2xl px-4 md:text-3xl ">CLASS EXPLORER</h1>
+            <hr className="w-30 border-t-5 border-red-700 mx-4 mt-3" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 ">
                 {/* card 1 */}
-                <div className="w-80 rounded-md overflow-hidden bg-tertiary flex flex-col">
+                <div className="w-80 rounded-md overflow-hidden bg-tertiary flex flex-col mx-auto">
                     <div className="relative">
                         <img
                             src={class5}
@@ -44,7 +44,7 @@ const ClassExplorer = () => {
                 </div>
 
                 {/* card 2 */}
-                <div className="w-80 rounded-md overflow-hidden bg-tertiary flex flex-col">
+                <div className="w-80 rounded-md overflow-hidden bg-tertiary flex flex-col mx-auto">
                     <div className="relative">
                         <img
                             src={class6}
@@ -78,7 +78,8 @@ const ClassExplorer = () => {
                     </button>
                 </div>
 
-                <div className="w-80 rounded-md overflow-hidden bg-tertiary flex flex-col">
+                    {/* card 3 */}
+                <div className="w-80 rounded-md overflow-hidden bg-tertiary flex flex-col mx-auto">
                     <div className="relative">
                         <img
                             src={class7}

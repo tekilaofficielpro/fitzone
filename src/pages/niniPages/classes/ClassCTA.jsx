@@ -13,7 +13,7 @@ const ClassCTA = () => {
                     <button class="w-full md:w-auto px-12 py-5 bg-white text-primary font-headline font-black text-xl uppercase italic tracking-widest hover:scale-105 transition-transform">
                         UPGRADE PLAN
                     </button>
-                    <button class="w-full md:w-auto px-12 py-5 border-2 border-white text-white font-headline font-black text-xl uppercase italic tracking-widest hover:bg-white hover:text-primary-container transition-all">
+                    <button class="w-full md:w-auto px-12 py-5 border-2 border-white text-white font-headline font-black text-xl uppercase italic tracking-widest hover:bg-white hover:text-black transition-all">
                         REFER A FRIEND
                     </button>
                 </div>
