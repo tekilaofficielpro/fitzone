@@ -16,18 +16,23 @@ const Contact = () => {
     <SectionHero />
 
     {/* section contact-layout */}
-    <section className='container h-[870px]'>
-      <div className='container mx-2 mt-70'>
-        <ul className='flex flex-row gap-x-[64px]'>
-          <li>
+    <section className='container min-h-[870px]'>
+      <div className='mx-2 mt-16 lg:mt-[70px]'>
+        <div className='flex flex-col lg:flex-row gap-8 lg:gap-x-[64px] items-start'>
+          
+          <div className='w-full lg:w-auto'>
             <ContactLayout />
-          </li>
+          </div>
 
           {/* ── Formulaire ── */}
-          <li ref={formRef} className='w-[720px] h-[662px] bg-[#1C1B1B] top-[96px] left-[533.33px] rounded-[4px] border-1 border-[#5F3F3A]/15 pt-[39.5px] pr-[40px] pb-[56px] pl-[40px] gap-[32px] col-start-6 col-span-7 row-start-1 row-span-1 reveal-right'>
+          <div
+            ref={formRef}
+            className='w-full lg:w-[720px] lg:h-[662px] bg-[#1C1B1B] rounded-[4px] border border-[#5F3F3A]/15 pt-[39.5px] pr-[40px] pb-[56px] pl-[40px] gap-[32px] reveal-right'
+          >
             <Formulaire />
-          </li>
-        </ul>
+          </div>
+
+        </div>
       </div>
     </section>
 

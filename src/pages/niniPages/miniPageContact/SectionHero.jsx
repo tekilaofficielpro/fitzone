@@ -7,24 +7,37 @@ export const SectionHero = () => {
   return (
     <>
     <style>{styles}</style>
-    <section className='container flex flex-row items-center justify-center h-[709px]'>
-      <div 
-        className="absolute inset-0 bg-[url('/BG_Contact.jpeg')] bg-cover bg-center"
-        style={{ opacity: 0.2 }} 
-      />
-      <div ref={heroRef} className='mt-20 relative left-8 top-10 reveal'>
-        <div className='container mx-auto relative z-10'>
-          <div className='text-[#FFFFFF] text-[146px] font-bold flex flex-row gap-6'>
-            <h1>GET IN</h1>
-            <div className='flex flex-col'>
-              <h1 className='z-10 text-[#E8000D]'>TOUCH</h1>
-              <div className='w-[220px] h-[8px] mb-6 relative right-25 bottom-5 bg-[#E8000D]'></div>
-            </div>
-          </div>
-          <h2 className='w-[599px] h-[36px] max-w-[744px] text-[#A0A0A0] text-[25px] mx-35 relative left-20 uppercase'>We're here to help you start your journey.</h2>
-        </div>
-      </div>
-    </section>
+    <section className='relative w-full min-h-[400px] sm:min-h-[550px] lg:min-h-[709px] flex items-center justify-center overflow-hidden'>
+  
+  {/* Background */}
+  <div
+    className="absolute inset-0 bg-[url('/BG_Contact.jpeg')] bg-cover bg-center"
+    style={{ opacity: 0.2 }}
+  />
+
+  {/* Contenu */}
+  <div ref={heroRef} className='relative z-10 w-full px-6 sm:px-10 lg:px-16 py-16 reveal'>
+    
+    {/* Titre principal */}
+   <div className='flex flex-col sm:flex-row items-center sm:items-end justify-center gap-0 sm:gap-4 mb-6'>
+    <h1 className='font-black text-white text-[clamp(52px,11vw,146px)] leading-[0.9] tracking-tight'>
+      GET IN
+    </h1>
+    <div className='flex flex-col gap-0 items-center'>
+      <h1 className='font-black text-[#E8000D] text-[clamp(52px,11vw,146px)] leading-[0.9] tracking-tight'>
+        TOUCH
+      </h1>
+      <div className='h-[5px] bg-[#E8000D] rounded-full w-full mt-2' />
+    </div>
+  </div>
+
+    {/* Sous-titre */}
+    <p className='text-[#A0A0A0] text-[clamp(14px,2vw,25px)] uppercase max-w-[744px] text-center mx-auto'>
+  We're here to help you start your journey.
+</p>
+
+  </div>
+</section>
     </>
   )
 }
